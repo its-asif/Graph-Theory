@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 const int N = 1e5+10;
 vector<int> g[N];
 int depth[N];
@@ -38,9 +39,7 @@ int main(){
 	dfs(mx_d_node);
 	for (int i = 1; i <= n; ++i)
 	{
-		if(mx_depth < depth[i]){
-			mx_depth = depth[i];		
-		}
+		mx_depth = max(mx_depth,depth[i]);
 	}
 
 	cout<<mx_depth<<endl;
